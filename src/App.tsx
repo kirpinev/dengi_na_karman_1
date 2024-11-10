@@ -152,126 +152,6 @@ export const App = () => {
               <List.Item>Добавление нескольких членов семьи</List.Item>
               <List.Item>Учет расходов</List.Item>
             </List>
-
-            <Gap size={32} />
-
-            <Typography.TitleResponsive
-              font="system"
-              tag="h3"
-              view="small"
-              weight="semibold"
-              className={appSt.productsTitle}
-            >
-              Выберите план
-            </Typography.TitleResponsive>
-
-            <div className={appSt.plans}>
-              <div
-                className={appSt.plan}
-                style={{
-                  ...(plan === "start" && { borderColor: "black" }),
-                }}
-                onClick={() => setPlan("start")}
-              >
-                {plan === "start" && (
-                  <StatusBadge
-                    view="positive-checkmark"
-                    size={20}
-                    className={appSt.checkMark}
-                  />
-                )}
-                <div>
-                  <Typography.Text tag="p" view="primary-small" weight="bold">
-                    Старт
-                  </Typography.Text>
-                  <Typography.Text
-                    tag="p"
-                    view="primary-small"
-                    color="secondary"
-                    style={{ marginBottom: 0 }}
-                  >
-                    до 1 члена семьи
-                  </Typography.Text>
-                </div>
-                <Typography.Text
-                  tag="p"
-                  view="primary-medium"
-                  style={{ marginBottom: 0 }}
-                >
-                  0 руб./мес.
-                </Typography.Text>
-              </div>
-              <div
-                className={appSt.plan}
-                style={{
-                  ...(plan === "comfort" && { borderColor: "black" }),
-                }}
-                onClick={() => setPlan("comfort")}
-              >
-                {plan === "comfort" && (
-                  <StatusBadge
-                    view="positive-checkmark"
-                    size={20}
-                    className={appSt.checkMark}
-                  />
-                )}
-                <div>
-                  <Typography.Text tag="p" view="primary-small" weight="bold">
-                    Комфорт
-                  </Typography.Text>
-                  <Typography.Text
-                    tag="p"
-                    view="primary-small"
-                    color="secondary"
-                    style={{ marginBottom: 0 }}
-                  >
-                    до 3 членов семьи
-                  </Typography.Text>
-                </div>
-                <Typography.Text
-                  tag="p"
-                  view="primary-medium"
-                  style={{ marginBottom: 0 }}
-                >
-                  99 руб./мес.
-                </Typography.Text>
-              </div>
-              <div
-                className={appSt.plan}
-                style={{
-                  ...(plan === "smart" && { borderColor: "black" }),
-                }}
-                onClick={() => setPlan("smart")}
-              >
-                {plan === "smart" && (
-                  <StatusBadge
-                    view="positive-checkmark"
-                    size={20}
-                    className={appSt.checkMark}
-                  />
-                )}
-                <div>
-                  <Typography.Text tag="p" view="primary-small" weight="bold">
-                    Подписка Альфа-Смарт
-                  </Typography.Text>
-                  <Typography.Text
-                    tag="p"
-                    view="primary-small"
-                    color="secondary"
-                    style={{ marginBottom: 0 }}
-                  >
-                    Комфорт + привилегии подписки
-                  </Typography.Text>
-                </div>
-                <Typography.Text
-                  tag="p"
-                  view="primary-medium"
-                  style={{ marginBottom: 0, minWidth: "100px" }}
-                >
-                  299 руб./мес.
-                </Typography.Text>
-              </div>
-            </div>
           </>
         ) : (
           <List tag="ul" marker="•">
@@ -281,6 +161,126 @@ export const App = () => {
             </List.Item>
           </List>
         )}
+
+        <Gap size={32} />
+
+        <Typography.TitleResponsive
+          font="system"
+          tag="h3"
+          view="small"
+          weight="semibold"
+          className={appSt.productsTitle}
+        >
+          Выберите план
+        </Typography.TitleResponsive>
+
+        <div className={appSt.plans}>
+          <div
+            className={appSt.plan}
+            style={{
+              ...(plan === "start" && { borderColor: "black" }),
+            }}
+            onClick={() => setPlan("start")}
+          >
+            {plan === "start" && (
+              <StatusBadge
+                view="positive-checkmark"
+                size={20}
+                className={appSt.checkMark}
+              />
+            )}
+            <div>
+              <Typography.Text tag="p" view="primary-small" weight="bold">
+                Старт
+              </Typography.Text>
+              <Typography.Text
+                tag="p"
+                view="primary-small"
+                color="secondary"
+                style={{ marginBottom: 0 }}
+              >
+                до 1 члена семьи
+              </Typography.Text>
+            </div>
+            <Typography.Text
+              tag="p"
+              view="primary-medium"
+              style={{ marginBottom: 0 }}
+            >
+              0 руб./мес.
+            </Typography.Text>
+          </div>
+          <div
+            className={appSt.plan}
+            style={{
+              ...(plan === "comfort" && { borderColor: "black" }),
+            }}
+            onClick={() => setPlan("comfort")}
+          >
+            {plan === "comfort" && (
+              <StatusBadge
+                view="positive-checkmark"
+                size={20}
+                className={appSt.checkMark}
+              />
+            )}
+            <div>
+              <Typography.Text tag="p" view="primary-small" weight="bold">
+                Комфорт
+              </Typography.Text>
+              <Typography.Text
+                tag="p"
+                view="primary-small"
+                color="secondary"
+                style={{ marginBottom: 0 }}
+              >
+                до 3 членов семьи
+              </Typography.Text>
+            </div>
+            <Typography.Text
+              tag="p"
+              view="primary-medium"
+              style={{ marginBottom: 0 }}
+            >
+              99 руб./мес.
+            </Typography.Text>
+          </div>
+          <div
+            className={appSt.plan}
+            style={{
+              ...(plan === "smart" && { borderColor: "black" }),
+            }}
+            onClick={() => setPlan("smart")}
+          >
+            {plan === "smart" && (
+              <StatusBadge
+                view="positive-checkmark"
+                size={20}
+                className={appSt.checkMark}
+              />
+            )}
+            <div>
+              <Typography.Text tag="p" view="primary-small" weight="bold">
+                Подписка Альфа-Смарт
+              </Typography.Text>
+              <Typography.Text
+                tag="p"
+                view="primary-small"
+                color="secondary"
+                style={{ marginBottom: 0 }}
+              >
+                Комфорт + привилегии подписки
+              </Typography.Text>
+            </div>
+            <Typography.Text
+              tag="p"
+              view="primary-medium"
+              style={{ marginBottom: 0, minWidth: "100px" }}
+            >
+              299 руб./мес.
+            </Typography.Text>
+          </div>
+        </div>
       </div>
 
       <Gap size={24} />
@@ -288,7 +288,7 @@ export const App = () => {
       <div className={appSt.bottomBtn}>
         <ButtonMobile
           loading={loading}
-          disabled={(transfer === "self" && !plan) || false}
+          disabled={!plan}
           block
           view="primary"
           onClick={submit}
